@@ -186,7 +186,7 @@ Data collected using:
 * Remote sensing datasets
 * Open geospatial repositories
 
-## ⚙️ Installation
+## Installation
 
 ```bash
 git clone https://github.com/yourusername/landslide-susceptibility-india-xai.git
@@ -242,31 +242,11 @@ This project uses **SHAP (SHapley Additive Explanations)** to:
 * Integration with satellite live data
 * Mobile-based early warning system
 
-
-##  Contributing
-
-Contributions are welcome!
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Submit a pull request
-
-##  License
-
-This project is licensed under the MIT License.
-
-##  Citation
-
-```
-@project
-title = {GIS-Integrated Hybrid Ensemble for Landslide Susceptibility Mapping}
-author = {Mutthuram}
-year = {2026}
-```
 ##  Author
 
 **Mutthuram**
+**Rangespandian**
+**Karthikeyan**
 
 ##  One-Line Summary
 
