@@ -107,11 +107,12 @@ landslide-susceptibility-india-xai/
 
 ## Data Structure 
 
+```
 D:/Landslide_Project/
 │
 ├── 01_DEM_Data/
-│   ├── Wayanad_DEM_30m.tif        ✅ You have this
-│   └── Uttarakhand_DEM_30m.tif    ⬜ Download next
+│   ├── Wayanad_DEM_30m.tif        
+│   └── Uttarakhand_DEM_30m.tif    
 │
 ├── 02_Wayanad_Factors/
 │   ├── Wayanad_Elevation.tif      ⬜ From QGIS
@@ -160,9 +161,22 @@ D:/Landslide_Project/
 │   └── Uttarakhand_Roads.shp      ⬜ OpenStreetMap
 │
 ├── 09_ML_Model/
-│   └── (Python files go here later)
+│  
 │
-└── References.txt                 ⬜ Create now
+└── References.txt                 
+```
+
+## Tell Me Your Current Situation
+
+Answer these 3 questions so I can guide you to the exact next step:
+
+**Question 1:** Did you extract the .tar.gz file and get the .tif file?
+
+**Question 2:** Is QGIS already installed on your computer?
+
+**Question 3:** Is your Google Earth Engine account approved yet?
+
+Based on your answers I will give you the exact next instruction with no confusion.
 
 ```
 
