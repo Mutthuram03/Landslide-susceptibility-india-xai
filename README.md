@@ -105,6 +105,67 @@ landslide-susceptibility-india-xai/
 *  Soil & Geological Maps
 *  Terrain Derivatives (Slope, Aspect, Curvature)
 
+## Data Structure 
+
+D:/Landslide_Project/
+│
+├── 01_DEM_Data/
+│   ├── Wayanad_DEM_30m.tif        ✅ You have this
+│   └── Uttarakhand_DEM_30m.tif    ⬜ Download next
+│
+├── 02_Wayanad_Factors/
+│   ├── Wayanad_Elevation.tif      ⬜ From QGIS
+│   ├── Wayanad_Slope.tif          ⬜ From QGIS
+│   ├── Wayanad_Aspect.tif         ⬜ From QGIS
+│   ├── Wayanad_Curvature.tif      ⬜ From QGIS
+│   ├── Wayanad_TWI.tif            ⬜ From QGIS
+│   ├── Wayanad_SPI.tif            ⬜ From QGIS
+│   ├── Wayanad_TRI.tif            ⬜ From QGIS
+│   └── Wayanad_FlowAcc.tif        ⬜ From QGIS
+│
+├── 03_Uttarakhand_Factors/
+│   ├── Uttarakhand_Elevation.tif  ⬜ From QGIS
+│   ├── Uttarakhand_Slope.tif      ⬜ From QGIS
+│   ├── Uttarakhand_Aspect.tif     ⬜ From QGIS
+│   ├── Uttarakhand_Curvature.tif  ⬜ From QGIS
+│   ├── Uttarakhand_TWI.tif        ⬜ From QGIS
+│   ├── Uttarakhand_SPI.tif        ⬜ From QGIS
+│   ├── Uttarakhand_TRI.tif        ⬜ From QGIS
+│   └── Uttarakhand_FlowAcc.tif    ⬜ From QGIS
+│
+├── 04_Geology_Data/
+│   ├── Wayanad_Geology.shp        ⬜ Bhukosh GSI
+│   ├── Wayanad_Geomorphology.shp  ⬜ Bhukosh GSI
+│   ├── Uttarakhand_Geology.shp    ⬜ Bhukosh GSI
+│   └── Uttarakhand_Geomorph.shp   ⬜ Bhukosh GSI
+│
+├── 05_Landslide_Inventory/
+│   ├── Wayanad_Landslides.shp     ⬜ Bhukosh GSI
+│   └── Uttarakhand_Landslides.shp ⬜ Bhukosh GSI
+│
+├── 06_Remote_Sensing/
+│   ├── Wayanad_LULC.tif           ⬜ Google GEE
+│   ├── Wayanad_NDVI.tif           ⬜ Google GEE
+│   ├── Uttarakhand_LULC.tif       ⬜ Google GEE
+│   └── Uttarakhand_NDVI.tif       ⬜ Google GEE
+│
+├── 07_Rainfall_Data/
+│   ├── Wayanad_Annual_Rain.tif    ⬜ Google GEE
+│   ├── Wayanad_Monsoon_Rain.tif   ⬜ Google GEE
+│   ├── Uttarakhand_Annual_Rain    ⬜ Google GEE
+│   └── Uttarakhand_Monsoon_Rain   ⬜ Google GEE
+│
+├── 08_Road_Network/
+│   ├── Wayanad_Roads.shp          ⬜ OpenStreetMap
+│   └── Uttarakhand_Roads.shp      ⬜ OpenStreetMap
+│
+├── 09_ML_Model/
+│   └── (Python files go here later)
+│
+└── References.txt                 ⬜ Create now
+
+```
+
 Data collected using:
 
 * Google Earth Engine
