@@ -1,0 +1,1 @@
+"""Spatial SHAP mapping placeholder."""

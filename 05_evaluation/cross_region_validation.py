@@ -1,0 +1,1 @@
+"""Cross-region validation placeholder."""
