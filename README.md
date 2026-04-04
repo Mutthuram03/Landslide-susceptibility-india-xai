@@ -49,51 +49,49 @@ GIS Data Sources (DEM, NDVI, Rainfall, LULC, etc.)
                         ↓
           Final Interpretable Outputs
 ```
-##  Project Structure
+## Project Structure
 
-```
-landslide-susceptibility-india-xai/
-│
-├── README.md
-├── requirements.txt
-├── LICENSE
-├── CITATION.cff
-│
-├── 01_data_collection/
-│   ├── gee_terrain_factors.js
-│   ├── gee_lulc_ndvi.js
-│   ├── gee_rainfall.js
-│   └── data_sources.md
-│
-├── 02_preprocessing/
-│   ├── feature_engineering.py
-│   ├── smote_balancing.py
-│   └── multicollinearity_check.py
-│
-├── 03_models/
-│   ├── xgboost_model.py
-│   ├── catboost_model.py
-│   ├── cnn_1d_model.py
-│   ├── bilstm_model.py
-│   └── stacking_ensemble.py
-│
-├── 04_explainability/
-│   ├── shap_analysis.py
-│   └── spatial_shap_mapping.py
-│
-├── 05_evaluation/
-│   ├── model_metrics.py
-│   └── cross_region_validation.py
-│
-├── 06_results/
-│   ├── susceptibility_maps/
-│   └── shap_plots/
-│
-├── notebooks/
-│   └── experimentation.ipynb
-│
-└── paper/
-    └── research_paper.pdf
+```text
+Landslide_Project/
+|
+|-- README.md
+|-- requirements.txt
+|-- LICENSE
+|-- CITATION.cff
+|-- References.txt
+|
+|-- 01_data_collection/
+|   |-- gee_terrain_factors.js
+|   |-- gee_lulc_ndvi.js
+|   |-- gee_rainfall.js
+|   `-- data_sources.md
+|
+|-- 02_preprocessing/
+|   |-- feature_engineering.py
+|   |-- smote_balancing.py
+|   `-- multicollinearity_check.py
+|
+|-- 03_models/
+|   |-- xgboost_model.py
+|   |-- catboost_model.py
+|   |-- cnn_1d_model.py
+|   |-- bilstm_model.py
+|   `-- stacking_ensemble.py
+|
+|-- 04_explainability/
+|   |-- shap_analysis.py
+|   `-- spatial_shap_mapping.py
+|
+|-- 05_evaluation/
+|   |-- model_metrics.py
+|   `-- cross_region_validation.py
+|
+|-- 06_results/
+|   |-- susceptibility_maps/
+|   `-- shap_plots/
+|
+|-- notebooks/
+`-- paper/
 ```
 
 ##  Data Sources
@@ -105,82 +103,24 @@ landslide-susceptibility-india-xai/
 *  Soil & Geological Maps
 *  Terrain Derivatives (Slope, Aspect, Curvature)
 
-## Data Structure 
+## Data Structure
 
-```
+```text
 D:/Landslide_Project/
-│
-├── 01_DEM_Data/
-│   ├── Wayanad_DEM_30m.tif        
-│   └── Uttarakhand_DEM_30m.tif    
-│
-├── 02_Wayanad_Factors/
-│   ├── Wayanad_Elevation.tif      ⬜ From QGIS
-│   ├── Wayanad_Slope.tif          ⬜ From QGIS
-│   ├── Wayanad_Aspect.tif         ⬜ From QGIS
-│   ├── Wayanad_Curvature.tif      ⬜ From QGIS
-│   ├── Wayanad_TWI.tif            ⬜ From QGIS
-│   ├── Wayanad_SPI.tif            ⬜ From QGIS
-│   ├── Wayanad_TRI.tif            ⬜ From QGIS
-│   └── Wayanad_FlowAcc.tif        ⬜ From QGIS
-│
-├── 03_Uttarakhand_Factors/
-│   ├── Uttarakhand_Elevation.tif  ⬜ From QGIS
-│   ├── Uttarakhand_Slope.tif      ⬜ From QGIS
-│   ├── Uttarakhand_Aspect.tif     ⬜ From QGIS
-│   ├── Uttarakhand_Curvature.tif  ⬜ From QGIS
-│   ├── Uttarakhand_TWI.tif        ⬜ From QGIS
-│   ├── Uttarakhand_SPI.tif        ⬜ From QGIS
-│   ├── Uttarakhand_TRI.tif        ⬜ From QGIS
-│   └── Uttarakhand_FlowAcc.tif    ⬜ From QGIS
-│
-├── 04_Geology_Data/
-│   ├── Wayanad_Geology.shp        ⬜ Bhukosh GSI
-│   ├── Wayanad_Geomorphology.shp  ⬜ Bhukosh GSI
-│   ├── Uttarakhand_Geology.shp    ⬜ Bhukosh GSI
-│   └── Uttarakhand_Geomorph.shp   ⬜ Bhukosh GSI
-│
-├── 05_Landslide_Inventory/
-│   ├── Wayanad_Landslides.shp     ⬜ Bhukosh GSI
-│   └── Uttarakhand_Landslides.shp ⬜ Bhukosh GSI
-│
-├── 06_Remote_Sensing/
-│   ├── Wayanad_LULC.tif           ⬜ Google GEE
-│   ├── Wayanad_NDVI.tif           ⬜ Google GEE
-│   ├── Uttarakhand_LULC.tif       ⬜ Google GEE
-│   └── Uttarakhand_NDVI.tif       ⬜ Google GEE
-│
-├── 07_Rainfall_Data/
-│   ├── Wayanad_Annual_Rain.tif    ⬜ Google GEE
-│   ├── Wayanad_Monsoon_Rain.tif   ⬜ Google GEE
-│   ├── Uttarakhand_Annual_Rain    ⬜ Google GEE
-│   └── Uttarakhand_Monsoon_Rain   ⬜ Google GEE
-│
-├── 08_Road_Network/
-│   ├── Wayanad_Roads.shp          ⬜ OpenStreetMap
-│   └── Uttarakhand_Roads.shp      ⬜ OpenStreetMap
-│
-├── 09_ML_Model/
-│  
-│
-└── References.txt                 
+|
+|-- 01_DEM_Data/
+|-- 02_Wayanad_Factors/
+|-- 03_Uttarakhand_Factors/
+|-- 04_Geology_Data/
+|-- 05_Landslide_Inventory/
+|-- 06_Remote_Sensing/
+|-- 07_Rainfall_Data/
+|-- 08_Road_Network/
+|-- 09_ML_Model/
+`-- References.txt
 ```
 
-## Tell Me Your Current Situation
-
-Answer these 3 questions so I can guide you to the exact next step:
-
-**Question 1:** Did you extract the .tar.gz file and get the .tif file?
-
-**Question 2:** Is QGIS already installed on your computer?
-
-**Question 3:** Is your Google Earth Engine account approved yet?
-
-Based on your answers I will give you the exact next instruction with no confusion.
-
-```
-
-Data collected using:
+## Data Collected Using
 
 * Google Earth Engine
 * Remote sensing datasets

@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+title: GIS-Integrated Multi-Stage Hybrid Ensemble Learning with Spatial Explainability for Landslide Susceptibility Mapping in India
+message: If you use this project, please cite it using this metadata.
+authors:
+  - family-names: Mutthuram
+  - family-names: Rangespandian
+  - family-names: Karthikeyan
